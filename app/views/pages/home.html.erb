@@ -1,7 +1,13 @@
 <div class="jumbotron center">
     <h1>Welcome to Social Clean</h1>
-    <p>Click here to Sign-up </p>
-    <p><%= link_to "Sign-up", "#", class: :"btn btn-success" %>
-      <%= link_to "Log in", "#", class: "btn btn-default" %>
+<% if user_signed_in? %>
+<% else %>
+<p>Till the one day when the lady met this fellow and they knew it was much more than a hunch. You wanna be where you can see our troubles are all the same. You wanna be where everybody knows Your name! Here he comes Here comes Speed Racer. He's a demon on wheels. You wanna be where you can see our troubles are all the same. You wanna be where everybody knows Your name.</p>
+
+<p>And we know Flipper lives in a world full of wonder flying there-under under the sea. Here's the story of a man named Brady who was busy with three boys of his own. In 1972 a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground.</p>
+    <p>
+    <%= link_to "Sign-up", new_user_registration_path, class: :"btn btn-success" %>
+    <%= link_to "Log in", new_user_session_path, class: "btn btn-default" %>
     </p>
+<% end %>
 </div>
