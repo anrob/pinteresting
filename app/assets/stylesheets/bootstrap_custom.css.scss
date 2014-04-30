@@ -2,3 +2,42 @@
 .center {
     text-align:center;
     }
+
+.cleanup{
+    margin-top:-450px;
+    font-size:52px;
+
+    font-weight:700;
+}
+
+.carousel {
+    margin-top:-20px;
+}
+
+.carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
+.carousel .item img {
+    width: 100%; /*img width*/
+}
+/*full width container*/
+@media (max-width: 767px) {
+    .block {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
+.full {
+    width: 100%;
+}
+
+.jumbotron {
+    padding-top:2px;
+}
+h1.welcome {
+    font-size:52px;
+    color:#d35400;
+    font-weight:700;
+}
