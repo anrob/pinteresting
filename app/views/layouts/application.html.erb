@@ -3,13 +3,16 @@
 <head>
   <title>Social Clean</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <%= render 'layouts/header' %>
-<%= render 'layouts/carosel' %>
+<%= render 'layouts/carosel' if (params[:action] == 'home') %>
+<%#= render(:partial => 'layout/carosel') if root_path end %>
 <div class="container">
   <% flash.each do |name, msg| %>
 <%= content_tag(:div, msg, class: "alert alert-info") %>

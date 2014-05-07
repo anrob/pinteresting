@@ -10,10 +10,22 @@
   <div class="carousel-inner img-responsive">
     <div class="item active">
       <img src="/assets/hero.jpeg"  class="img-responsive" alt="Awesome">
-      <div class="carousel-caption">
-      <h1 class="cleanup">Clean Up your Social Footprints</h1>
-<%= link_to "Join the Waitlist", about_path, class: "btn btn-success btn-lg " %>
+      <div>
+  <div id="sliderbox" class="container">
+    <h1 class="cleanup">Clean Up your Social Footprints</h1>
+    <% if user_signed_in? %>
+    Signed in as <%= current_user.name %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
+    <% else %>
+    <%#= link_to "Sign up", new_user_registration_path %>
+    <%#= link_to "Sign in", new_user_session_path %>
+    <%= button_to  user_omniauth_authorize_path(:facebook), class: "btn btn-facebook" do %>
+<i class="fa fa-facebook"></i> | Connect with Facebook
+<% end %>
+    <% end %>
+<!-- <p><button class="btn btn-facebook btn-lg"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %><i class="fa fa-facebook"></i> | Connect with Facebook</button></p> -->
       </div>
+</div>
     </div>
 
    <!--  <div class="item ">
@@ -31,6 +43,7 @@
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
   </a>
+<%#= link_to "Join the Waitlist", new_user_registration_path, class: "btn btn-success btn-lg " %>
   <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
@@ -38,9 +51,49 @@
 </div>
 
 <div class="jumbotron center">
-    <h1 class="welcome">Welcome to Social Clean</h1>
+    <h1 class="welcome">How It Works</h1>
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-md-4 column">
+          <h2>
+            Connect Your Account
+          </h2>
+        <p class="lead">Till the one day when the lady met this fellow and they knew it was much more than a hunch. You wanna be where you can see our troubles are all the same. You wanna be where everybody knows Your name! Here he comes Here comes Speed Racer. He's a demon on wheels. You wanna be where you can see our troubles are all the same. You wanna be where everybody knows Your name.</p>
+          <p>
+            <a class="btn btn-info" href="#">View details »</a>
+          </p>
+        </div>
+        <div class="col-md-4 column">
+          <h2>
+            Clean it up
+          </h2>
+      <p class="lead">And we know Flipper lives in a world full of wonder flying there-under under the sea. Here's the story of a man named Brady who was busy with three boys of his own. In 1972 a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground.</p>
+          <p>
+            <a class="btn btn-primary" href="#">View details »</a>
+          </p>
+        </div>
+        <div class="col-md-4 column">
+          <h2>
+            Happy You
+          </h2>
+          <p class="lead">
+            Thats it.  You now have a clean ready to go social footprint.
+          </p>
+          <p>
+            <a class="btn btn-success" href="#">View details »</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+</div>
+
 <% if user_signed_in? %>
 <% else %>
+<div class="middle">
+  <div class="container center">
+
+
 <p class="lead">Till the one day when the lady met this fellow and they knew it was much more than a hunch. You wanna be where you can see our troubles are all the same. You wanna be where everybody knows Your name! Here he comes Here comes Speed Racer. He's a demon on wheels. You wanna be where you can see our troubles are all the same. You wanna be where everybody knows Your name.</p>
 
 <p>And we know Flipper lives in a world full of wonder flying there-under under the sea. Here's the story of a man named Brady who was busy with three boys of his own. In 1972 a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground.</p>
@@ -49,5 +102,6 @@
     <%= link_to "Log in", new_user_session_path, class: "btn btn-default" %>
     </p>
 <% end %>
+ </div>
 </div>
 

@@ -1,0 +1,63 @@
+<div class="text-center">
+        <h1 class="title">Congratulations!</h1>
+      </div>
+                <div class="row">
+                        <div class="col-md-offset-3 col-md-6 col-xs-12">
+                          <div class="pricing center-block">
+                            <div class="wrapper text-center well">
+                              <span class="line no-margin no-padding">
+      <%#= button_to "Posting a test message", current_user.postit %>
+                                You have <%= current_user.friends_count %> Friends<br>
+ </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      <div class="row">
+              <p class="description">You're in line to get access to the Streem beta, but it looks like there's a few people ahead of you...</p>
+
+<% if current_user %>
+
+<%#= current_user.friendslist.inspect %>
+<%# current_user.mefault.each do |mef| %>
+<%#= mef %>
+<%# end %></br>
+<%#= render 'thepost' %>
+<%# current_user.user_status.each do |status| %>
+<!--<li><%#= status["message"] %><%#= current_user.status.inspect %></li>-->
+<%# end %>
+<%#= current_user.mefault.inspect %>
+<%= render  'myinfo' %>
+
+<%#= render 'thepermis' %>
+<%#= @next_page = current_user.get_likes.next_page %>
+<% end %>
+<hr>
+
+
+                  <div class="row priority">
+                      <div class="text-center">
+                        <h2 class="title">Want FREE unlimited storage and priority access?</h2>
+                        <p class="description">Get your friends to sign up! The more friends that join, the sooner you'll receive access to unlimited storage! Plus, if you share your link on Facebook or Twitter, we'll give you unlimited storage for FREE during the beta!</p>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-offset-1 col-md-2 col-sm-12">
+                          <button id="facebook-share" type="submit" class="btn btn-large btn-block btn-info"> <span class="glyphicon glyphicon-star"></span>  Share</button>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                          <button id="twitter-share" type="submit" class="btn btn-large btn-block btn-info"><i class="fa fa-twitter"></i>  Tweet</button>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                          <button id="linkedin-share" type="submit" class="btn btn-large btn-block btn-info"><i class="fa fa-linkedin"></i>  Share</button>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                          <button id="email-share" type="submit" class="btn btn-large btn-block btn-info"><i class="fa fa-envelope"></i>  Email</button>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                          <button id="google-share" type="submit" class="btn btn-large btn-block btn-info"><i class="fa fa-google-plus"></i>  Share</button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <p class="description share-link">Or share your unique referral link: <span class="ref-link">https://streem.com/r/4sA6RW</span></p>
+                      </div>
+                    </div>

@@ -1,17 +1,47 @@
-
+@import 'bootstrap';
+@import 'bootstrap.min';
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+body { padding-top: 76px; }
 .center {
     text-align:center;
     }
 
-.cleanup{
-    margin-top:-450px;
-    font-size:52px;
+.navbar-brand, .nav-brand a {
+    font-size:32px;
+    font-weight:700;
+text-transform: uppercase;
+color:#f1c40f;
+}
 
+.cleanup{
+
+    font-size:52px;
     font-weight:700;
 }
 
-.carousel {
-    margin-top:-20px;
+div#sliderbox {
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    position: relative;
+    top: -600px;
+    color: white;
+}
+
+
+.navbar {
+    padding:6px 0;
+    border-bottom:4px white solid;
+}
+
+.littleheight {
+    line-height:10px;
+}
+
+.joinwish {
+    padding-top:48px;
 }
 
 .carousel .item {
@@ -36,8 +66,30 @@
 .jumbotron {
     padding-top:2px;
 }
+.jumbotron p.lead {
+    font-size: 16px;
+}
+div.col-md-4.column{
+    background-color: white;
+    padding: 0 35px;
+    margin-right: 10px;
+    width: 32%;
+    min-height: 400px;
+}
+h1,h2,h3,h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 h1.welcome {
     font-size:52px;
-    color:#d35400;
+    color:#9b59b6;
     font-weight:700;
+font-family: 'Montserrat', sans-serif;
+}
+
+.middle {
+    padding:30px 0;
+    background:#2c3e50;
+color: rgb(255,255,255);
+margin-top:-30px;
 }

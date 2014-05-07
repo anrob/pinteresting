@@ -1,0 +1,10 @@
+<%=  @root_metadata["contents"].inspect %>
+
+<% @root_metadata["contents"].each do |v| %>
+<%# unless v["is_dir"] = true %>
+<li><%="#{v["path"]}" %></li>
+<%= image_tag "#{v["path"]}", :title => "title", :class => "class" %>
+<%# end %>
+<% end %>
+<hr>
+<%= @thepics.inspect %>

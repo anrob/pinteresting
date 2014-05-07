@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
+   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   root 'pages#home'
   get "about" => "pages#about"
+  get "profile" => "pages#profile"
+   get 'authorize', controller: 'dropbox', action: 'authorize'
+   get 'listpics' => "dropbox#listpics"
+   post 'cleanit' => 'users#remove_post'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

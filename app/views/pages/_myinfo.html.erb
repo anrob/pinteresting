@@ -1,0 +1,28 @@
+<%= simple_format current_user.getpic("").to_yaml %>
+
+<h3 class="text-info" >Family</h3>
+<div class="row">
+
+<% current_user.mefault.each do |gg| %>
+<div class="col-xs-6 col-md-3">
+<li><%= "#{gg['name']}" " - " "#{gg["relationship"].capitalize }"%></li>
+</div>
+<% end %>
+<%# end %>
+</div>
+
+<%#= current_user.subsc.inspect %>
+<h3 class="text-info">Pages you like (<%= current_user.get_likes.size %>)</h3>
+
+<div class="row">
+  <% current_user.get_likes.each do |f| %>
+  <div class="col-xs-6 col-md-3">
+              <% @cool = current_user.getpic("#{f['id']}") %>
+<%#= simple_format @cool.inspect %>
+<%= image_tag("https://scontent-b.xx.fbcdn.net/hphotos-frc3/t1.0-9/190218_10151256680675610_674907164_n.jpg") %>
+          <li><%= link_to "#{f['name']}", "http://facebook.com/#{f['id']}"%></li>
+        </div>
+          <% end %>
+
+  </div>
+</div>

@@ -21,6 +21,11 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 gem 'devise', '~> 3.2.4'
+gem 'dropbox-sdk'
+gem "koala", "~> 1.8.0rc1"
+gem 'omniauth'
+#gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 

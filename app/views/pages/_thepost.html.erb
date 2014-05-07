@@ -1,0 +1,5 @@
+<h3>Posts</h3>
+<%#= simple_format current_user.posts.to_yaml %>
+<% current_user.posts.each do |posts| %>
+<li><%= posts["story"] ? "#{posts["story"]}" : posts["message"] ? "#{posts["message"]}" : "#{posts["name"]}" %><%#= button_to "remove Post", cleanit_path(posts["id"]), class: 'btn btn-large btn-block btn-info' %><%#= "#{posts["id"]}" %></li>
+<% end %><hr>
